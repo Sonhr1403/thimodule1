@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+  function insertNumberToArray(arr, x, index) {
+    if (index < 0 || index > arr.length) {
+      return arr;
+    } else {
+      let array = new Array(arr.length + 1);
+      for (let i = 0; i <= arr.length; i++){
+        if (i < index) {
+          array[i] = arr[i];
+        } else if (i === index) {
+          array[i] = x;
+        } else {
+          array[i] = arr[i-1];
+        }
+      }
+      return array;
+    }
+  }
+
+  let a = [1,2,3,4,5,6];
+  document.write("Mảng mới là: " + insertNumberToArray(a, 1, 2));
+</script>

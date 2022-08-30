@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+<canvas width="500" height="500" id="theRectangle"></canvas>
+</body>
+</html>
+
+<script>
+    class Rectangle {
+        x;
+        y;
+        width;
+        height;
+        color;
+
+        constructor(x, y, width, height, color) {
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+            this.color = color;
+        }
+
+        render(canvas) {
+            let ctx = canvas.getContext("2d");
+            ctx.fillStyle = this.color;
+            ctx.fillRect(this.x, this.y, this.width, this.height, this.color);
+        }
+    }
+    let canvas = document.getElementById("theRectangle");
+    let rect1 = new Rectangle(100, 100, 300, 150, "blue");
+    rect1.render(canvas);
+</script>

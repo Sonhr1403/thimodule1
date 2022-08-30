@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    let a = prompt("Số cần kiểm tra tới là: ");
+    function sumOfListPrime(x) {
+        let sum = 0;
+        let number = 2;
+        while (number <= x) {
+            let check = true;
+            for (let i = 2; i < number; i++) {
+                if (number % i === 0) {
+                    check = false;
+                    break;
+                }
+            }
+            if (check) {
+                sum += number;
+                number++;
+            } else {
+                number++
+            }
+        }
+        return sum;
+    }
+
+    document.write("Tổng của các số nguyên tố từ 0 cho tới " + a + " là: " + sumOfListPrime(a));
+</script>
